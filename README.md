@@ -10,11 +10,11 @@ This package should be installed via npm. You must have npm installed first. The
 `npm install @nicolawealth/resolved_promise`
 
 # Interface
-This package exports the object `resolvedPromises` with the following properties, all of which are promises resolved with specific values:
-* `resolvedPromises.void`: a promise which resolves with `void`
-* `resolvedPromises.undefined`: a promise which resolves with `undefined`
-* `resolvedPromises.true`: a promise which resolves with `true`
-* `resolvedPromises.false`: a promise which resolves with `false`
+This package exports the object `resolvedPromise` with the following properties, all of which are promises resolved with specific values:
+* `resolvedPromise.void`: a promise which resolves with `void`
+* `resolvedPromise.undefined`: a promise which resolves with `undefined`
+* `resolvedPromise.true`: a promise which resolves with `true`
+* `resolvedPromise.false`: a promise which resolves with `false`
 
 # Testing
 Tests can be found in `resolved_promise.test.ts` located in `resolved_promise/src` and should be run with sinon, mocha and nyc.
