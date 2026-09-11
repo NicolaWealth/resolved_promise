@@ -1,15 +1,16 @@
 {
   "name": "@nicolawealth/resolved_promise",
   "version": "0.0.3",
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.umd.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "unpkg": "./dist/index.umd.js",
   "types": "./dist/types/index.d.ts",
   "source": "src/index.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.umd.js",
-      "import": "./dist/index.umd.js"
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     }
   },
   "files": [
@@ -33,8 +34,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist/* && rm -f tsconfig.tsbuildinfo",
-    "build": "microbundle --format umd",
-    "rename:esm": "/bin/zsh ./scripts/fix-mjs.sh",
+    "build": "vite build",
     "lint": "eslint src",
     "test": "mocha",
     "test-r": "mocha -R spec",
@@ -45,23 +45,21 @@
   "engines": {
     "node": ">=22"
   },
-  "dependencies": {
-  },
   "devDependencies": {
     "@nicolawealth/code_coverage_extractor": "^2",
-    "@types/mocha": "^9",
+    "@types/mocha": "^10",
     "@types/node": "^22",
-    "@types/sinon": "^10",
+    "@types/sinon": "^22",
     "@typescript-eslint/eslint-plugin": "^8",
     "eslint": "^9",
     "eslint-config-turbo": "^2",
-    "microbundle": "^0.15.1",
-    "mocha": "^10",
-    "mocha-junit-reporter": "^2",
-    "nyc": "^15",
-    "sinon": "^19",
+    "mocha": "^12",
+    "nyc": "^18",
+    "sinon": "^22",
     "ts-node": "^10",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vite": "^8.3.0",
+    "vite-plugin-dts": "^5.1.0"
   },
   "packageManager": "npm@10.9.0"
 }
