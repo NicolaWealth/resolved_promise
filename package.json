@@ -34,7 +34,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist/* && rm -f tsconfig.tsbuildinfo",
-    "build": "vite build",
+    "build": "rolldown -c",
     "lint": "eslint src",
     "test": "mocha",
     "test-r": "mocha -R spec",
@@ -55,11 +55,11 @@
     "eslint-config-turbo": "^2",
     "mocha": "^12",
     "nyc": "^18",
+    "rolldown": "^1.2.9",
+    "rolldown-plugin-dts": "^0.28.6",
     "sinon": "^22",
     "ts-node": "^10",
-    "typescript": "^5",
-    "vite": "^8.3.0",
-    "vite-plugin-dts": "^5.1.0"
+    "typescript": "^5"
   },
   "packageManager": "npm@10.9.0"
 }
